@@ -7,9 +7,13 @@ this will explain how to set up your jenkins ci/cd pipeline on your EC2.
 
 4. sudo yum install -y java-1.8.0-openjdk-devel 
     - to install Java 11 you need to use the extra repository provided by amazon: `sudo amazon-linux-extras install java-openjdk11`
-5. wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz (make sure to replace this with the updated version)
+5. wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.81/bin/apache-tomcat-8.5.81.tar.gz
+ (make sure to replace this with the updated version)
 6. tar -zxvf apache-tomcat-9.0.41.tar.gz
-    - unzip, extract, verbose, file
+    - unzip, extract, verbose, 
+    
+    tar -zxvf apache-tomcat-8.5.81.tar.gz
+
 7. go to conf folder
 8. open tomcat-users.xml in your text editor of choice (vi/vim, nano)
 9. add role and user (username and password are up to you)
@@ -35,6 +39,7 @@ this will explain how to set up your jenkins ci/cd pipeline on your EC2.
     - if it does not - make sure your Security Group has Custom TCP port 8080 rules to allow inbound traffic from anywhere (or your IP address)
 15. go to webapps folder
 16. wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+wget https://mirrors.jenkins.io/war-stable/latest/jenkins.war
 17. in your browser, go to aws-hostname:8080/jenkins
 18. follow basic setup prompts, you will need to find a passcode in your ec2
     - sudo su

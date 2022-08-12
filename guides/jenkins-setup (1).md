@@ -39,7 +39,7 @@ this will explain how to set up your jenkins ci/cd pipeline on your EC2.
     - if it does not - make sure your Security Group has Custom TCP port 8080 rules to allow inbound traffic from anywhere (or your IP address)
 15. go to webapps folder
 16. wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
-wget https://mirrors.jenkins.io/war-stable/latest/jenkins.war
+wget https://mirrors.jenkins.io/war-stable/latest/jenkins.war 
 17. in your browser, go to aws-hostname:8080/jenkins
 18. follow basic setup prompts, you will need to find a passcode in your ec2
     - sudo su
